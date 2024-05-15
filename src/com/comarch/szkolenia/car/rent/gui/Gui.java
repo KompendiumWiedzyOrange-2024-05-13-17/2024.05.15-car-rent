@@ -1,27 +1,25 @@
 package com.comarch.szkolenia.car.rent.gui;
 
 import com.comarch.szkolenia.car.rent.model.Car;
+import com.comarch.szkolenia.car.rent.model.Truck;
+import com.comarch.szkolenia.car.rent.model.Vehicle;
 
 import java.util.Scanner;
 
 public class Gui {
-    Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     public String showMenuAndReadChoose() {
-        System.out.println("1. List cars");
-        System.out.println("2. Rent car");
-        System.out.println("3. Return car");
+        System.out.println("1. List vehicles");
+        System.out.println("2. Rent vehicle");
+        System.out.println("3. Return vehicle");
         System.out.println("4. Exit");
         return scanner.nextLine();
     }
 
-    public void listCars(Car[] cars) {
-        for(Car car : cars) {
-            System.out.println(car.getBrand() + " " +
-                    car.getModel() + " Cena: " +
-                    car.getPrice() + " Rejestracja: " +
-                    car.getPlate() + " Rent: " +
-                    car.isRent());
+    public void listVehicles(Vehicle[] vehicles) {
+        for(Vehicle vehicle : vehicles) {
+            System.out.println(vehicle);
         }
     }
 
