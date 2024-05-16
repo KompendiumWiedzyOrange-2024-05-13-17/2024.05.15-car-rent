@@ -5,25 +5,24 @@ import com.comarch.szkolenia.car.rent.gui.Gui;
 
 public class Core {
     private final VehicleRepository vehicleRepository = new VehicleRepository();
-    private final Gui gui = new Gui();
     public void start() {
         boolean run = true;
         while(run) {
-            switch(gui.showMenuAndReadChoose()) {
+            switch(Gui.showMenuAndReadChoose()) {
                 case "1":
-                    gui.listVehicles(vehicleRepository.getVehicles());
+                    Gui.listVehicles(vehicleRepository.getVehicles());
                     break;
                 case "2":
-                    gui.showResult(vehicleRepository.rent(gui.readPlate()));
+                    Gui.showResult(vehicleRepository.rent(Gui.readPlate()));
                     break;
                 case "3":
-                    gui.showResult(vehicleRepository.receive(gui.readPlate()));
+                    Gui.showResult(vehicleRepository.receive(Gui.readPlate()));
                     break;
                 case "4":
                     run = false;
                     break;
                 default:
-                    gui.showWrongChoose();
+                    Gui.showWrongChoose();
                     break;
             }
         }

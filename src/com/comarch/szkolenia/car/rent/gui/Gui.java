@@ -1,15 +1,14 @@
 package com.comarch.szkolenia.car.rent.gui;
 
-import com.comarch.szkolenia.car.rent.model.Car;
-import com.comarch.szkolenia.car.rent.model.Truck;
 import com.comarch.szkolenia.car.rent.model.Vehicle;
 
+import java.util.Collection;
 import java.util.Scanner;
 
 public class Gui {
-    private final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
-    public String showMenuAndReadChoose() {
+    public static String showMenuAndReadChoose() {
         System.out.println("1. List vehicles");
         System.out.println("2. Rent vehicle");
         System.out.println("3. Return vehicle");
@@ -17,18 +16,18 @@ public class Gui {
         return scanner.nextLine();
     }
 
-    public void listVehicles(Vehicle[] vehicles) {
+    public static void listVehicles(Collection<Vehicle> vehicles) {
         for(Vehicle vehicle : vehicles) {
             System.out.println(vehicle);
         }
     }
 
-    public String readPlate() {
+    public static String readPlate() {
         System.out.println("Enter plate:");
         return scanner.nextLine();
     }
 
-    public void showResult(boolean result) {
+    public static void showResult(boolean result) {
         if (result) {
             System.out.println("Success !!");
         } else {
@@ -36,7 +35,7 @@ public class Gui {
         }
     }
 
-    public void showWrongChoose() {
+    public static void showWrongChoose() {
         System.out.println("Wrong choose ! Try again !");
     }
 }

@@ -20,15 +20,31 @@ public class Test {
         System.out.println("Wczytalismy:");
         System.out.println(s);*/
 
-        final int JAKAS_STALA = 5;
+        /*final int JAKAS_STALA = 5;
         System.out.println(JAKAS_STALA);
 
         final Vehicle VEHICLE = new Vehicle();
         VEHICLE.setBrand("BMW");
         System.out.println(VEHICLE);
         VEHICLE.setBrand("Audi");
-        System.out.println(VEHICLE);
+        System.out.println(VEHICLE);*/
 
         //VEHICLE = new Vehicle();
+
+        Test2.surname = "Kowalski";
+
+        Test2 t2 = new Test2();
+        t2.name = "Karol";
+        t2.surname = "Malinowski";
+
+        Test2 t3 = new Test2();
+        t3.name = "Janusz";
+        t3.surname = "Wisniewski";
+
+        System.out.println(t2.name);
+        System.out.println(t2.surname);
+        System.out.println(t3.name);
+        System.out.println(t3.surname);
+        System.out.println(Test2.surname);
     }
 }
